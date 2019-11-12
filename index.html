@@ -1,19 +1,65 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Omer's Workshop</title>
-    <script src="./redux.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <p>
-        Counter: <span id="value">0</span> times
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning Redux</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <nav>
+    <a href="./index.html" class="logo">LEARN REDUX</a>
+    <a href="./pages/about.html" class="about">ABOUT</a>
+  </nav>
+
+  <h3 class="heading">Learn redux with simple examples</h3>
+  <main>
+
+
+    <div class="container1">
+
+      <div class="button-cont">
         <button id="increment">+</button>
         <button id="decrement">-</button>
-        <button id="incrementIfOdd">Increment if odd</button>
-        <button id="incrementAsync">Increment async</button>
-      </p>
+        <button id="odd-increment">Increment if odd</button>
+        <button id="async-increment">Async Increment</button>
+      </div>
+
+      <p id="value1"></p>
+
     </div>
-    <script src="./index.js"></script>
-  </body>
+
+    <div class="container2">
+      <h2>See how state flows?</h2>
+      <input type="text" class="text-source">
+
+      <p class="colored-text"></p>
+
+      <div class="button-cont2">
+        <button id="red">red</button>
+        <button id="blue">blue</button>
+        <button id="green">green</button>
+      </div>
+    </div>
+
+
+    <div class="container3">
+
+    </div>
+  </main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log("Service worker registered"))
+        .catch(err => console.error("An error occured", err))
+    }
+  </script>
+  <script src="./js/redux.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary:grey;
+  --primary-light:rgba(128, 128, 128, 0.4);
+  --secondary:white;
+}
+a {
+  color: var(--secondary);
+  text-decoration: none !important;
+}
+nav {
+  background-color: var(--primary);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+body {
+  background-color: var(--primary-light);
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin: 0 2rem;
+}
+.heading {
+  background-color: var(--secondary);
+  display: flex;
+  margin-bottom: 1rem ;
+  padding: 1rem 0;
+  justify-content: space-around;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.container1, .container2 {
+  background-color: var(--secondary);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 1rem 0;
+}
+.button-cont {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.button-cont button {
+  padding: 0.3rem 0;
+  margin: 0.3rem 1rem;
+}
+#value1 {
+  text-align: center;
+  margin: auto 0;
+  font-size: 4rem;
+}
+.button-cont2 {
+  display:flex; 
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+.button-cont2 * {
+  padding: 0.3rem 0;
+}
+
+.container2 {
+  padding: 1rem 1rem;
+  row-gap: 0.5rem;
+}
+.container2 input {
+  grid-column: span 2;
+  font-size: 1rem;
+  border: 1px solid var(--primary);
+  padding: 0 1rem;
+}
+.container2 h2 {
+  grid-column: span 2; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.colored-text {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+@media (max-width:700px){
+  main {
+    grid-template-columns: 1fr;
+  }
+}
