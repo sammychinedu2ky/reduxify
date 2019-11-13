@@ -21,9 +21,8 @@ self.addEventListener('install', async event => {
 
 self.addEventListener('activate', async event => {
   const keys = await caches.keys();
-  const uselessKeys = keys.filter(key => key !== staticCache);
-  uselessKeys.map(key => caches.delete(key))
-})
+  keys.map(key =>key!=staticCache? caches.delete(key):'');
+ })
 
 self.addEventListener('fetch', event => {
   event.respondWith(
